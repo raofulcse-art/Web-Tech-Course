@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Global Tech Connect – Event Registration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HERO HEADER -->
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="badge">Upcoming Event</span>
+      <h1>Global Tech Connect</h1>
+      <p class="tagline">Workshops · Webinars · Networking for Tech Professionals</p>
+      <div class="event-meta">
+        <span>📅 April 20, 2026</span>
+        <span>📍 Dhaka &amp; Online</span>
+        <span>⏰ 10:00 AM – 5:00 PM</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ANALYTICS SECTION -->
+    <section class="analytics-section">
+      <button id="analyticsBtn" class="btn-analytics">Show Event Analytics</button>
+      <div id="analyticsPanel" class="analytics-panel hidden">
+        <h2>Event Analytics</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number" id="totalCount">0</span>
+            <span class="stat-label">Total Registrants</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" id="virtualCount">0</span>
+            <span class="stat-label">Virtual Attendees</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" id="inPersonCount">0</span>
+            <span class="stat-label">In-Person Attendees</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGISTRATION FORM -->
+    <section class="form-section">
+      <h2>Register for This Event</h2>
+      <p class="form-subtitle">Secure your spot at Global Tech Connect. All fields marked * are required.</p>
+
+      <form id="registrationForm" novalidate>
+
+        <!-- Full Name -->
+        <div class="form-group">
+          <label for="fullName">Full Name <span class="required">*</span></label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="e.g. Ayesha Rahman"
+            maxlength="100"
+          />
+          <span class="error-msg" id="nameError"></span>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Professional Email <span class="required">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="e.g. ayesha@company.com"
+          />
+          <span class="error-msg" id="emailError"></span>
+        </div>
+
+        <!-- Company -->
+        <div class="form-group">
+          <label for="company">Company / Institution <span class="optional">(Optional)</span></label>
+          <input
+            type="text"
+            id="company"
+            name="company"
+            placeholder="e.g. TechCorp Bangladesh"
+            maxlength="100"
+          />
+        </div>
+
+        <!-- Attendance Type -->
+        <div class="form-group">
+          <label class="group-label">Attendance Type <span class="required">*</span></label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="attendance" value="Virtual" />
+              <span class="radio-custom"></span>
+              Virtual
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="attendance" value="In-Person" />
+              <span class="radio-custom"></span>
+              In-Person
+            </label>
+          </div>
+          <span class="error-msg" id="attendanceError"></span>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn-submit">Register Now</button>
+
+      </form>
+
+      <p id="successMessage" class="success-msg" style="display:none;"></p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Global Tech Connect. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
